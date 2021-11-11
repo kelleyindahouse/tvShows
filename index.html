@@ -63,7 +63,43 @@
     // })
 
 
-    const itCrowd = [
+    const shows = [
+      {
+        title: 'The IT Crowd',
+        years: '2006 - 2013',
+        rating: '8.5/10',
+        genre: 'Comedy',
+        seasons: '5 seasons',
+        summary: 'The comedic misadventures of Roy, Moss and their grifting supervisor Jen, a rag-tag team of IT support workers at a large corporation headed by a hotheaded yuppie.',
+        stars: "Chris O'Dawd, Richard Ayoade, Katherine Parkinson",
+      },
+      {
+        title: 'The IT Crowd',
+        years: '2006 - 2013',
+        rating: '8.5/10',
+        genre: 'Comedy',
+        seasons: '5 seasons',
+        summary: 'The comedic misadventures of Roy, Moss and their grifting supervisor Jen, a rag-tag team of IT support workers at a large corporation headed by a hotheaded yuppie.',
+        stars: "Chris O'Dawd, Richard Ayoade, Katherine Parkinson",
+      },
+      {
+        title: 'The IT Crowd',
+        years: '2006 - 2013',
+        rating: '8.5/10',
+        genre: 'Comedy',
+        seasons: '5 seasons',
+        summary: 'The comedic misadventures of Roy, Moss and their grifting supervisor Jen, a rag-tag team of IT support workers at a large corporation headed by a hotheaded yuppie.',
+        stars: "Chris O'Dawd, Richard Ayoade, Katherine Parkinson",
+      },
+      {
+        title: 'The IT Crowd',
+        years: '2006 - 2013',
+        rating: '8.5/10',
+        genre: 'Comedy',
+        seasons: '5 seasons',
+        summary: 'The comedic misadventures of Roy, Moss and their grifting supervisor Jen, a rag-tag team of IT support workers at a large corporation headed by a hotheaded yuppie.',
+        stars: "Chris O'Dawd, Richard Ayoade, Katherine Parkinson",
+      },
       {
         title: 'The IT Crowd',
         years: '2006 - 2013',
@@ -75,21 +111,27 @@
       }
     ]
     
-    for (let i = 0; i < itCrowd.length; i++) {
+    for (let i = 0; i < shows.length; i++) {
       let userElem = document.createElement('div')
       userElem.innerHTML = `
-        <h3>${itCrowd[i].title}</h3>
-        <h4>${itCrowd[i].years}</h4>
-        <h4>${itCrowd[i].rating}</h4>
-        <h4>${itCrowd[i].genre}</h4>
-        <h4>${itCrowd[i].seasons}</h4>
-        <h4>${itCrowd[i].summary}</h4>
-        <h4>${itCrowd[i].stars}</h4>
+        <h3>${shows[i].title}</h3>
+        <h4>${shows[i].years}</h4>
+        <h4>${shows[i].rating}</h4>
+        <h4>${shows[i].genre}</h4>
+        <h4>${shows[i].seasons}</h4>
+        <h4>${shows[i].summary}</h4>
+        <h4>${shows[i].stars}</h4>
+        <button class="delete">Delete</button>
         <hr>
       `
       document.getElementById('shows').append(userElem)
     }
 
+    document.addEventListener('click', event => {
+      if (event.target.className === 'delete') {
+        event.target.parentNode.remove()
+      }
+    })  
 
   </script>
 

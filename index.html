@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- <form>
+    <p>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title">
+    </p>
+    <p>
+      <label for="genre">Genre</label>
+      <input type="text" name="genre" id="genre">
+    </p>
+    <p>
+      <label for="rating">IMDB Rating</label>
+      <input type="text" name="rating" id="rating">
+    </p>
+    <p>
+      <label for="seasons">Seasons</label>
+      <input type="text" name="seasons" id="seasons">
+    </p>
+    <button id="list">Add to List</button>
+  </form> -->
+
+  <div id="shows"></div>
+
+  <script>
+    
+    // document.getElementById('list').addEventListener('click', event => {
+    //     event.preventDefault()
+
+    //     console.log(document.getElementById('title').value)
+    //     console.log(document.getElementById('genre').value)
+    //     console.log(document.getElementById('rating').value)
+    //     console.log(document.getElementById('seasons').value)
+
+    //     let listDiv = document.createElement('div')
+  
+    //     userList.innerHTML = `
+    //     <h2>${document.getElementById('title').value}</h2>
+    //     <h4>${document.getElementById('genre').value}</h4>
+    //     <h4>${document.getElementById('rating').value}</h4>
+    //     <h4>${document.getElementById('seasons').value}</h4>
+    //     <hr>
+    //   `
+    //     // document.getElementById('').append()
+
+    //     document.getElementById('title').value = ''
+    //     document.getElementById('genre').value = ''
+    //     document.getElementById('rating').value = ''
+    //     document.getElementById('seasons').value = ''
+
+    //     // document.getElementById('user').innerHTML = `
+    //     //   <h1>${document.getElementById('username').value}</h1>
+    //     //   <h2>${document.getElementById('password').value}</h2>
+    //     // `
+    // })
+
+
+    const itCrowd = [
+      {
+        title: 'The IT Crowd',
+        years: '2006 - 2013',
+        rating: '8.5/10',
+        genre: 'Comedy',
+        seasons: '5 seasons',
+        summary: 'The comedic misadventures of Roy, Moss and their grifting supervisor Jen, a rag-tag team of IT support workers at a large corporation headed by a hotheaded yuppie.',
+        stars: "Chris O'Dawd, Richard Ayoade, Katherine Parkinson",
+      }
+    ]
+    
+    for (let i = 0; i < itCrowd.length; i++) {
+      let userElem = document.createElement('div')
+      userElem.innerHTML = `
+        <h3>${itCrowd[i].title}</h3>
+        <h4>${itCrowd[i].years}</h4>
+        <h4>${itCrowd[i].rating}</h4>
+        <h4>${itCrowd[i].genre}</h4>
+        <h4>${itCrowd[i].seasons}</h4>
+        <h4>${itCrowd[i].summary}</h4>
+        <h4>${itCrowd[i].stars}</h4>
+        <hr>
+      `
+      document.getElementById('shows').append(userElem)
+    }
+
+
+  </script>
+
+</body>
+</html>
